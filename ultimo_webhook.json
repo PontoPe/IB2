@@ -1,0 +1,4261 @@
+{
+  "timestamp": "2025-06-04T13:50:02.814653",
+  "original": {
+    "_id": {
+      "$oid": "684078bdc1424af2716375b3"
+    },
+    "seq_id": 32,
+    "template_id": {
+      "$oid": "67f6bc2caa27d85466bdb9ea"
+    },
+    "user_id": {
+      "$oid": "680164368065037501c5c408"
+    },
+    "execution_company_id": {
+      "$oid": "663d31a1e9dac3f5f4d3cf2e"
+    },
+    "company_id": {
+      "$oid": "663d31a1e9dac3f5f4d3cf2e"
+    },
+    "execution_status": "in_progress",
+    "template_name": "Planejamento",
+    "template_sections": [
+      {
+        "_id": "03385d19346f489d9d3dff3bd6059c8e",
+        "title": "Identificação",
+        "order": 1,
+        "score_result": null
+      },
+      {
+        "_id": "67fea1675216b04f018bcf86",
+        "title": "Fiscalização Técnica",
+        "order": 6,
+        "score_result": null
+      },
+      {
+        "_id": "67fea1d730dd001ca88bc113",
+        "title": "Fiscalização Administrativa",
+        "order": 11,
+        "score_result": null
+      },
+      {
+        "_id": "680150df12e98a390ac85b2d",
+        "title": "Fiscalização de Obras (COPEA)",
+        "order": 16,
+        "score_result": null
+      },
+      {
+        "_id": "680150ef0e3c46b599287973",
+        "title": "Gestão do Contrato",
+        "order": 21,
+        "score_result": null
+      },
+      {
+        "_id": "680150f8a1d4e7bd42bda004",
+        "title": "Verificador de Conformidade",
+        "order": 26,
+        "score_result": null
+      },
+      {
+        "_id": "67fea0fa5216b04f018bcf50",
+        "title": "Finalização",
+        "order": 27,
+        "score_result": null
+      },
+      {
+        "_id": "680148b7e75961f638bd141a",
+        "title": "Suporte",
+        "order": 32,
+        "score_result": null
+      }
+    ],
+    "template_questions": [
+      {
+        "order": 1,
+        "question": "Identificador",
+        "_id": "140ef5e4f3504731abfe0a2309de7265",
+        "section": "03385d19346f489d9d3dff3bd6059c8e",
+        "value": "032 - 2025",
+        "type": "string"
+      },
+      {
+        "order": 2,
+        "question": "Data prevista para a realização do checklist",
+        "_id": "8113d0edd61c4cf6bf65ec10bdf68cda",
+        "section": "03385d19346f489d9d3dff3bd6059c8e",
+        "value": "04/06/2025",
+        "type": "date"
+      },
+      {
+        "order": 5,
+        "question": "Gerar checklist",
+        "_id": "646a61428fd44e8da3f716cd5a4edc88",
+        "section": "67fea0fa5216b04f018bcf50",
+        "value": "true",
+        "type": "boolean"
+      },
+      {
+        "order": 7,
+        "question": "Contrato",
+        "_id": "716aa46fea6c47bba86e08fb5b89530f",
+        "section": "680148b7e75961f638bd141a",
+        "options": [
+          {
+            "text": "11",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "10.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.1.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.1.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.1.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.2.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.2.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.2.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.3.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.3.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.4.1.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.4.1.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.4.1.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.5.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.7",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.8",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "13.6.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "15.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "15.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.aa",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.dd",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.h",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.j",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.l",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.m",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.n",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.o",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.p",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.q",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.r",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.s",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.u",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.w",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.y",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.z",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "20.1.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "22.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "22.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "22.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "22.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "22.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "22.7.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "24.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "24.7.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "24.7.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "24.7.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "24.7.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "26.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "27.1.",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "27.3.",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "27.3.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "28.8.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "28.8.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "37.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "37.6.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "37.6.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "37.6.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "37.6.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "38.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "38.1.2.",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "38.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "38.7.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.1.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.1.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.1.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.1.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.1.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "9.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "9.2.2",
+            "value": "false",
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "order": 6,
+        "question": "Caderno de Encargos",
+        "_id": "8edd88d56c9d42d48b2415ed3b428e7e",
+        "section": "680148b7e75961f638bd141a",
+        "options": [
+          {
+            "text": "1.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "1.5.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.1.1.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.1.1.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.1.1.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.1.1.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.2.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.3.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.3.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.3.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.3.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.4.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.4.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.4.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.5.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.5.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.5.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.5.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.5.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.5.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.5.5.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.5.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.2.1.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.2.1.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.2.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.2.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.3.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.3.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.3.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.4.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.4.2.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.4.2.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.4.2.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.5.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.5.2.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.5.2.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.5.2.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.2.",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.3.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.3.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.3.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.4.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.4.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.4.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.4.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.2.a, b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.5.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.5.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.5.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.5.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.4.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.4.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.4.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.4.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.4.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.4.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.7",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.8",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.3.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.3.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.3.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.3.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.3.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.3.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.3.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.3.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.3.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.4.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.4.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.4.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.4.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.4.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.4.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.4.g",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.5.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.5.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.5.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.5.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.5.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.5.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.5.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.5.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.5.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.7",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.8",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.5.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.5.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.5.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.6.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.6.4.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.6.4.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.6.4.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.6.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.6.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.7.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.7.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.7.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.7.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.8.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.10.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.10.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.10.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.11.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.11.2.a,b,c,d,e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.11.4.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.11.4.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.11.4.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.11.4.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.11.7",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.12.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.12.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.12.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.12.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.13.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.13.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.13.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.13.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.13.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.13.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.2.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.2.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.2.g",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.2.h",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.2.i",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.4.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.4.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.4.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.4.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.15.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.15.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.15.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.15.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.15.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.16.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.16.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.16.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.16.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.16.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.16.2.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.16.2.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.16.2.g",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.17.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.17.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.17.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.17.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.17.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.17.2.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.17.2.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.18.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.18.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.18.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.18.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.18.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.18.2.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.18.2.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.19.1.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.19.1.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.19.1.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.19.1.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.19.1.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.19.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.3.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.3.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.3.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.3.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.3.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.3.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.4.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.4.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.4.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.4.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.4.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.20.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.20.5.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.20.5.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.20.5.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.20.7",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.21.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.22.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.22.3.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.22.3.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.22.3.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.22.3.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.22.3.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.10",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.5.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.5.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.5.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.5.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.5.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.7",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.8",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.9",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.3.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.3.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.3.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.3.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.3.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.3.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.3.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.3.g",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.3.h",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.4.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.4.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.5.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.5.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.4.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.4.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.4.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.4.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.4.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.4.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.4.g",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.4.h",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.7",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.9.a-f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.2.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.2.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.2.g",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.2.h",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.7.1.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.7.1.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.7.1.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.8.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.8.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.8.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.8.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.8.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.8.2.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.9.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.9.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.9.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.1.1.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.1.1.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.1.1.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.1.1.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.4.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.4.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.6.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.6.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.7",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.8",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.9",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.3.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.4.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.5.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.6.1.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.6.1.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.6.1.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.6.1.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.6.1.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.6.1.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.6.1.g",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.7.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.7.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "9.1.a.b.c.d.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "9.4.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "9.5.2",
+            "value": "false",
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "order": 8,
+        "question": "FA - Caderno de Encargos",
+        "_id": "ba96ed788f4c44d6981dc52ba6f69bcc",
+        "section": "680148b7e75961f638bd141a",
+        "options": [
+          {
+            "text": "1.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "1.5.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.1.1.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.1.1.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.1.1.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.1.1.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.2.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.3.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.3.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.3.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.3.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.4.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.4.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.4.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.5.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.5.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.5.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.5.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.5.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.5.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.5.5.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.1.5.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.2.1.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.2.1.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.2.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.2.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.3.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.3.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.3.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.4.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.4.2.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.4.2.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.4.2.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.5.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.5.2.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.5.2.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.5.2.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.2.",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.3.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.3.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.3.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.4.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.4.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.4.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.4.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "4.6.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.2.a, b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.5.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.5.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.5.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.1.5.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.4.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.4.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.4.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.4.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.4.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.4.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.7",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.2.8",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.3.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.3.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.3.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.3.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.3.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.3.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.3.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.3.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.3.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.4.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.4.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.4.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.4.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.4.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.4.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.4.g",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.5.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.5.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.5.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.5.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.3.5.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.5.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.5.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.5.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.5.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.7",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.4.8",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.5.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.5.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.5.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.6.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.6.4.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.6.4.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.6.4.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.6.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.6.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.7.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.7.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.7.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.7.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "5.8.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.10.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.10.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.10.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.11.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.11.2.a,b,c,d,e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.11.4.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.11.4.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.11.4.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.11.4.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.11.7",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.12.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.12.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.12.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.12.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.13.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.13.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.13.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.13.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.13.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.13.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.2.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.2.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.2.g",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.2.h",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.2.i",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.4.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.4.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.4.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.4.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.14.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.15.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.15.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.15.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.15.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.15.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.16.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.16.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.16.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.16.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.16.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.16.2.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.16.2.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.16.2.g",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.17.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.17.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.17.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.17.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.17.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.17.2.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.17.2.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.18.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.18.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.18.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.18.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.18.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.18.2.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.18.2.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.19.1.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.19.1.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.19.1.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.19.1.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.19.1.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.19.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.3.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.3.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.3.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.3.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.3.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.3.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.4.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.4.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.4.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.4.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.4.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.2.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.20.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.20.5.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.20.5.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.20.5.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.20.7",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.21.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.22.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.22.3.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.22.3.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.22.3.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.22.3.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.22.3.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.10",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.5.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.5.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.5.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.5.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.5.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.7",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.8",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.23.9",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.3.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.3.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.3.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.3.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.3.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.3.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.3.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.3.g",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.3.h",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.4.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.4.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.5.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.4.5.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.4.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.4.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.4.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.4.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.4.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.4.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.4.g",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.4.h",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.7",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.5.9.a-f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.2.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.2.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.2.g",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.6.2.h",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.7.1.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.7.1.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.7.1.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.8.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.8.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.8.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.8.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.8.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.8.2.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.9.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.9.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "6.9.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.1.1.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.1.1.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.1.1.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.1.1.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.4.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.4.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.6.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.6.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.7",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.8",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.2.9",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.3.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.4.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.5.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.6.1.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.6.1.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.6.1.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.6.1.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.6.1.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.6.1.f",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.6.1.g",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.7.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.7.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "9.1.a.b.c.d.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "9.4.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "9.5.2",
+            "value": "false",
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "order": 9,
+        "question": "FA - Contrato",
+        "_id": "83b77e3a981747368eea32c66fff2027",
+        "section": "680148b7e75961f638bd141a",
+        "options": [
+          {
+            "text": "11",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "10.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.1.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.1.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.1.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.2.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.2.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.2.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.3.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.3.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.4.1.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.4.1.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.4.1.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.5.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.7",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.1.8",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "12.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "13.6.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "15.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "15.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.aa",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.dd",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.h",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.j",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.l",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.m",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.n",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.o",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.p",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.q",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.r",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.s",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.u",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.w",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.y",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "16.2.z",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "20.1.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "22.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "22.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "22.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "22.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "22.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "22.7.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "24.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "24.7.2.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "24.7.2.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "24.7.2.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "24.7.2.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "26.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "27.1.",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "27.3.",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "27.3.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "28.8.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "28.8.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "37.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "37.6.a",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "37.6.b",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "37.6.c",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "37.6.d",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "38.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "38.1.2.",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "38.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "38.7.e",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.1.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.1.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.1.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.1.2",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.1.4",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.3",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.5",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "7.6",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "9.2.1",
+            "value": "false",
+            "type": "boolean"
+          },
+          {
+            "text": "9.2.2",
+            "value": "false",
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "question": "Concessionária",
+        "_id": "39a054c31c5b440da7c66a2b817f45ad",
+        "section": "03385d19346f489d9d3dff3bd6059c8e",
+        "value": "Helisul",
+        "type": "string"
+      },
+      {
+        "order": 4,
+        "question": "Contrato de concessão",
+        "_id": "106abf5ba6a24526889924ceb19da507",
+        "section": "03385d19346f489d9d3dff3bd6059c8e",
+        "value": "12/2015",
+        "type": "date"
+      },
+      {
+        "order": 1,
+        "question": "Adicionar itens - Fiscalização Técnica",
+        "_id": "77ace8bfa7ed4571be4f9973b71d0df9",
+        "section": "67fea1675216b04f018bcf86",
+        "sub_checklists": [
+          {
+            "_id": {
+              "$oid": "684078bdc1424af2716375b5"
+            },
+            "sub_checklist_questions": [
+              {
+                "order": 2,
+                "question": "Enviar para execução (FT)",
+                "_id": "7ca61ffdfc864be99747f2a1822f203e",
+                "section": "",
+                "value": "true",
+                "type": "boolean"
+              },
+              {
+                "order": 0,
+                "question": "Item (FT)",
+                "_id": "1165a87090a544539528b46a8a9e02a5",
+                "section": "",
+                "value": "1.5 ",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 1,
+        "question": "Adicionar itens - Fiscalização Administrativa",
+        "_id": "7b52d666db274981b318b95f0139a831",
+        "section": "67fea1d730dd001ca88bc113",
+        "sub_checklists": [
+          {
+            "_id": {
+              "$oid": "684078bdc1424af2716375b7"
+            },
+            "sub_checklist_questions": [
+              {
+                "order": 2,
+                "question": "Item (FA)",
+                "_id": "8e3a6f55a9d9474594707cea335e6faf",
+                "section": "",
+                "value": "1.5.1",
+                "type": "string"
+              },
+              {
+                "order": 3,
+                "question": "Enviar para execução (FA)",
+                "_id": "5d8796cd727649c98214014079a42c75",
+                "section": "",
+                "value": "true",
+                "type": "boolean"
+              }
+            ]
+          },
+          {
+            "_id": {
+              "$oid": "684078cfd8a67b9d0f8c90bc"
+            },
+            "sub_checklist_questions": [
+              {
+                "order": 2,
+                "question": "Item (FA)",
+                "_id": "8e3a6f55a9d9474594707cea335e6faf",
+                "section": "",
+                "value": "12.4",
+                "type": "string"
+              },
+              {
+                "order": 3,
+                "question": "Enviar para execução (FA)",
+                "_id": "5d8796cd727649c98214014079a42c75",
+                "section": "",
+                "value": "true",
+                "type": "boolean"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 1,
+        "question": "Adicionar itens - Fiscalização de Obras (COPEA)",
+        "_id": "f301ff05ca8a4bfdbbb72e132159cf68",
+        "section": "680150df12e98a390ac85b2d"
+      },
+      {
+        "order": 1,
+        "question": "Adicionar itens - Gestão do Contrato",
+        "_id": "2e82b67427f14ffa926eeec2e0c4f851",
+        "section": "680150ef0e3c46b599287973"
+      },
+      {
+        "order": 1,
+        "question": "Adicionar itens - Verificador de Conformidade",
+        "_id": "20bf85a6c74e4751a4179c38dc4601fc",
+        "section": "680150f8a1d4e7bd42bda004"
+      },
+      {
+        "order": 5,
+        "question": "Gerar Itens",
+        "_id": "bd2c424b447f4e539a5f5b06b1bd25ab",
+        "section": "03385d19346f489d9d3dff3bd6059c8e",
+        "value": "false",
+        "type": "boolean"
+      }
+    ],
+    "score_result": null
+  },
+  "formatado": {
+    "identificador": "032 - 2025",
+    "data_prevista": "04/06/2025",
+    "contrato_concessao": "12/2015",
+    "concessionaria": "Helisul",
+    "itens_ft": [
+      {
+        "item": "1.5 ",
+        "habilitado": true,
+        "tipo": "FT"
+      }
+    ],
+    "itens_fa": [
+      {
+        "item": "1.5.1",
+        "habilitado": true,
+        "tipo": "FA"
+      },
+      {
+        "item": "12.4",
+        "habilitado": true,
+        "tipo": "FA"
+      }
+    ],
+    "itens_fo": [],
+    "itens_gc": [],
+    "itens_vc": []
+  },
+  "itens_habilitados": [
+    {
+      "item": "1.5 ",
+      "tipo": "FT"
+    },
+    {
+      "item": "1.5.1",
+      "tipo": "FA"
+    },
+    {
+      "item": "12.4",
+      "tipo": "FA"
+    }
+  ]
+}
