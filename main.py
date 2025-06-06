@@ -3,7 +3,7 @@
 # Instalar dependências se necessário:
 # pip install fastapi nest-asyncio pyngrok uvicorn
 
-import nest_asyncio
+main.pyimport nest_asyncio
 from pyngrok import ngrok, conf
 import uvicorn
 import sys
