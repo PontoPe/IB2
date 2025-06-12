@@ -3,7 +3,7 @@ import time
 import json
 
 # Token e cabeçalhos
-token = YOUR_TOKEN_HERE
+token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjb21wYW55X2lkIjoiNjYzZDMxYTFlOWRhYzNmNWY0ZDNjZjJlIiwiY3VycmVudF90aW1lIjoxNzQ4OTUzODcyNjgzLCJleHAiOjIwNjQ0ODY2NzJ9.j6zOrJMDKNcCcMMcO99SudriP7KqEDLMJDE2FBlQ6ok'
 headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
