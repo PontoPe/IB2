@@ -285,13 +285,20 @@ def processar_webhook_completo(body):
     # Processar todos os itens habilitados de forma otimizada
     resultados = processar_itens_habilitados(informacoes)
 
-    # Retornar resposta
+    # MODIFICAÇÃO: Adicionar os formulários encontrados ao response
+    formularios_por_tipo = {}
+    for tipo, formularios in resultados.items():
+        if formularios:
+            formularios_por_tipo[tipo] = formularios
+
+    # Retornar resposta com formulários
     response = {
         "status": "sucesso",
         "dados_formatados": informacoes,
         "itens_habilitados": itens_habilitados_ultimo,
         "total_itens_habilitados": len(itens_habilitados_ultimo),
-        "resultados_processamento": {tipo: len(resultado) for tipo, resultado in resultados.items()}
+        "resultados_processamento": {tipo: len(resultado) for tipo, resultado in resultados.items()},
+        "formularios_por_tipo": formularios_por_tipo  # NOVO: Adicionar formulários
     }
 
     return response

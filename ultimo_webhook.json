@@ -1,10 +1,10 @@
 {
-  "timestamp": "2025-06-04T13:50:02.814653",
+  "timestamp": "2025-06-23T20:33:10.729639",
   "original": {
     "_id": {
-      "$oid": "684078bdc1424af2716375b3"
+      "$oid": "6859e203f7bc85eba7ab7f49"
     },
-    "seq_id": 32,
+    "seq_id": 43,
     "template_id": {
       "$oid": "67f6bc2caa27d85466bdb9ea"
     },
@@ -75,7 +75,7 @@
         "question": "Identificador",
         "_id": "140ef5e4f3504731abfe0a2309de7265",
         "section": "03385d19346f489d9d3dff3bd6059c8e",
-        "value": "032 - 2025",
+        "value": "043 - 2025",
         "type": "string"
       },
       {
@@ -83,7 +83,7 @@
         "question": "Data prevista para a realização do checklist",
         "_id": "8113d0edd61c4cf6bf65ec10bdf68cda",
         "section": "03385d19346f489d9d3dff3bd6059c8e",
-        "value": "04/06/2025",
+        "value": "23/06/2025",
         "type": "date"
       },
       {
@@ -4091,7 +4091,7 @@
         "question": "Concessionária",
         "_id": "39a054c31c5b440da7c66a2b817f45ad",
         "section": "03385d19346f489d9d3dff3bd6059c8e",
-        "value": "Helisul",
+        "value": "Urbia Canions",
         "type": "string"
       },
       {
@@ -4099,7 +4099,7 @@
         "question": "Contrato de concessão",
         "_id": "106abf5ba6a24526889924ceb19da507",
         "section": "03385d19346f489d9d3dff3bd6059c8e",
-        "value": "12/2015",
+        "value": "01/2021",
         "type": "date"
       },
       {
@@ -4110,7 +4110,7 @@
         "sub_checklists": [
           {
             "_id": {
-              "$oid": "684078bdc1424af2716375b5"
+              "$oid": "6859e203f7bc85eba7ab7f4b"
             },
             "sub_checklist_questions": [
               {
@@ -4126,7 +4126,7 @@
                 "question": "Item (FT)",
                 "_id": "1165a87090a544539528b46a8a9e02a5",
                 "section": "",
-                "value": "1.5 ",
+                "value": "10.2",
                 "type": "string"
               }
             ]
@@ -4141,7 +4141,7 @@
         "sub_checklists": [
           {
             "_id": {
-              "$oid": "684078bdc1424af2716375b7"
+              "$oid": "6859e203f7bc85eba7ab7f4d"
             },
             "sub_checklist_questions": [
               {
@@ -4149,7 +4149,7 @@
                 "question": "Item (FA)",
                 "_id": "8e3a6f55a9d9474594707cea335e6faf",
                 "section": "",
-                "value": "1.5.1",
+                "value": "11",
                 "type": "string"
               },
               {
@@ -4157,30 +4157,7 @@
                 "question": "Enviar para execução (FA)",
                 "_id": "5d8796cd727649c98214014079a42c75",
                 "section": "",
-                "value": "true",
-                "type": "boolean"
-              }
-            ]
-          },
-          {
-            "_id": {
-              "$oid": "684078cfd8a67b9d0f8c90bc"
-            },
-            "sub_checklist_questions": [
-              {
-                "order": 2,
-                "question": "Item (FA)",
-                "_id": "8e3a6f55a9d9474594707cea335e6faf",
-                "section": "",
-                "value": "12.4",
-                "type": "string"
-              },
-              {
-                "order": 3,
-                "question": "Enviar para execução (FA)",
-                "_id": "5d8796cd727649c98214014079a42c75",
-                "section": "",
-                "value": "true",
+                "value": "false",
                 "type": "boolean"
               }
             ]
@@ -4217,26 +4194,21 @@
     "score_result": null
   },
   "formatado": {
-    "identificador": "032 - 2025",
-    "data_prevista": "04/06/2025",
-    "contrato_concessao": "12/2015",
-    "concessionaria": "Helisul",
+    "identificador": "043 - 2025",
+    "data_prevista": "23/06/2025",
+    "contrato_concessao": "01/2021",
+    "concessionaria": "Urbia Canions",
     "itens_ft": [
       {
-        "item": "1.5 ",
+        "item": "10.2",
         "habilitado": true,
         "tipo": "FT"
       }
     ],
     "itens_fa": [
       {
-        "item": "1.5.1",
-        "habilitado": true,
-        "tipo": "FA"
-      },
-      {
-        "item": "12.4",
-        "habilitado": true,
+        "item": "11",
+        "habilitado": false,
         "tipo": "FA"
       }
     ],
@@ -4246,16 +4218,8 @@
   },
   "itens_habilitados": [
     {
-      "item": "1.5 ",
+      "item": "10.2",
       "tipo": "FT"
-    },
-    {
-      "item": "1.5.1",
-      "tipo": "FA"
-    },
-    {
-      "item": "12.4",
-      "tipo": "FA"
     }
   ]
 }

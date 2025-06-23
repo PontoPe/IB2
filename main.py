@@ -8,10 +8,13 @@ from pyngrok import ngrok, conf
 import uvicorn
 import sys
 import os
+import json
 
 # Importar módulos do projeto
 import webhook
 import GET
+from POST import ChecklistCreator# Importar o criador de checklists
+import POSTtest
 
 
 def verificar_dependencias():
@@ -101,37 +104,7 @@ def exibir_informacoes_sistema(public_url):
     print("=" * 60)
 
     print(f"🔗 URL pública do webhook: {public_url}/webhook")
-    print(f"📋 Modo de operação: 🔄 Cache atualizado a cada webhook")
-
-    print("\n🌐 ENDPOINTS DISPONÍVEIS:")
-    print(f"   POST {public_url}/webhook")
-    print("      └── Receber webhooks (atualiza cache automaticamente)")
-
-    print(f"   GET  {public_url}/itens-habilitados")
-    print("      └── Listar itens do último webhook processado")
-
-    print(f"   GET  {public_url}/recarregar-cache")
-    print("      └── Forçar recarregamento manual do cache")
-
-    print(f"   GET  {public_url}/status-cache")
-    print("      └── Verificar status e informações do cache")
-
-    print("\n📁 ARQUIVOS DO PROJETO:")
-    print("   📄 main.py - Orquestrador principal (este arquivo)")
-    print("   📄 webhook.py - Funções de processamento do webhook")
-    print("   📄 GET.py - Funções de requisição e cache de formulários")
-
-    print("\n🔄 FLUXO DE OPERAÇÃO:")
-    print("   1. Webhook recebido → Atualiza cache de formulários")
-    print("   2. Extrai informações do webhook → Identifica itens habilitados")
-    print("   3. Busca formulários no cache → Processa resultados")
-    print("   4. Salva resultados por tipo → Retorna resposta")
-
-    print("\n💡 DICAS DE USO:")
-    print("   • O cache é atualizado automaticamente a cada webhook")
-    print("   • Resultados são salvos em arquivos JSON por tipo (FT, FA, FO, GC, VC)")
-    print("   • Use /status-cache para monitorar o sistema")
-    print("   • Logs detalhados são exibidos no console")
+    print(f"📋 Modo de operação: 🔄 Cache atualizado a cada webhook + POST automático")
 
 
 def testar_modulos():
@@ -149,12 +122,179 @@ def testar_modulos():
         app = webhook.criar_app_fastapi()
         print("✅ webhook.py: Módulo carregado corretamente")
 
+        # Testar POST.py
+        creator = ChecklistCreator()
+        print("✅ POST.py: Módulo carregado corretamente")
+
         print("✅ Todos os módulos funcionando!")
         return True
 
     except Exception as e:
         print(f"❌ Erro ao testar módulos: {e}")
         return False
+
+
+def modificar_webhook_com_post():
+    """
+    Modifica o processamento do webhook para incluir o POST automático
+    """
+    # Salvar a função original
+    processar_webhook_original = webhook.processar_webhook_completo
+
+    # Variável global para armazenar o último checklist criado
+    ultimo_checklist_id = None
+
+    def processar_webhook_com_post(body):
+        """
+        Versão modificada que adiciona POST após processar webhook
+        """
+        nonlocal ultimo_checklist_id
+
+        # Processar webhook normalmente
+        resultado = processar_webhook_original(body)
+
+        if resultado['status'] == 'sucesso':
+            print("\n" + "=" * 60)
+            print("📝 INICIANDO CRIAÇÃO AUTOMÁTICA DO CHECKLIST")
+            print("=" * 60)
+
+            try:
+                # Extrair informações do resultado
+                dados = resultado['dados_formatados']
+
+                # Preparar dados de identificação
+                identificacao = {
+                    'data_prevista': dados['data_prevista'],
+                    'contrato': dados['contrato_concessao'],
+                    'identificador': dados['identificador'],
+                    'concessionaria': dados['concessionaria']
+                }
+
+                # Criar o ID do checklist baseado no identificador
+                checklist_id = f"exec_{dados['identificador'].replace(' ', '_').replace('-', '_')}"
+
+                print(f"📅 Data prevista: {identificacao['data_prevista']}")
+                print(f"🏢 Concessionária: {identificacao['concessionaria']}")
+
+                # Processar os itens habilitados e buscar informações no cache
+                itens_por_tipo = processar_itens_para_post(dados, resultado.get('formularios_por_tipo', {}))
+
+                # Criar o checklist usando POST.py
+                creator = ChecklistCreator()
+                checklist_criado = creator.criar_checklist_completo(
+                    identificacao=identificacao,
+                    itens_por_tipo=itens_por_tipo,
+                    assignee_id="6478f2c883e4a9312d68da0b",  # Pode ser configurável
+                    creator_id="6478f2c883e4a9312d68da0b"
+                )
+
+                if checklist_criado:
+                    ultimo_checklist_id = checklist_criado
+                    resultado['checklist_criado'] = checklist_criado
+                    print(f"\n✅ CHECKLIST CRIADO COM SUCESSO!")
+                    print(f"📋 ID: {checklist_criado}")
+                    print("=" * 60)
+                else:
+                    print("\n❌ Falha ao criar checklist")
+
+            except Exception as e:
+                print(f"\n❌ Erro ao criar checklist: {e}")
+                import traceback
+                traceback.print_exc()
+
+        return resultado
+
+    # Substituir a função no módulo webhook
+    webhook.processar_webhook_completo = processar_webhook_com_post
+
+    # Retornar função para acessar o último checklist
+    def obter_ultimo_checklist():
+        return {"ultimo_checklist_id": ultimo_checklist_id}
+
+    return obter_ultimo_checklist
+
+
+def processar_itens_para_post(dados_webhook, formularios_por_tipo=None):
+    """
+    Processa os itens habilitados e busca informações no cache para criar o formato do POST
+    """
+    itens_por_tipo = {}
+
+    # Se não tiver formulários, buscar no cache
+    if not formularios_por_tipo:
+        formularios_por_tipo = {}
+        for tipo in ['FA', 'FT', 'FO', 'GC', 'VC']:
+            itens_habilitados = []
+            for item in dados_webhook[f'itens_{tipo.lower()}']:
+                if item['habilitado']:
+                    itens_habilitados.append(item['item'])
+
+            if itens_habilitados:
+                formularios = GET.buscar_clausulas(itens_habilitados, mostrar_detalhes=False)
+                formularios_por_tipo[tipo] = formularios
+
+    # Processar cada tipo
+    for tipo in ['FA', 'FT', 'FO', 'GC', 'VC']:
+        itens = []
+
+        # Buscar itens habilitados do webhook
+        itens_webhook = dados_webhook.get(f'itens_{tipo.lower()}', [])
+        itens_habilitados = [item for item in itens_webhook if item['habilitado']]
+
+        if itens_habilitados:
+            print(f"\n📋 Processando {len(itens_habilitados)} itens {tipo}...")
+
+            # Para cada item habilitado, buscar no cache
+            for item_webhook in itens_habilitados:
+                item_clausula = item_webhook['item']
+
+                # Buscar informações do formulário no cache
+                formularios = GET.buscar_clausulas([item_clausula], mostrar_detalhes=False)
+
+                if formularios:
+                    formulario = formularios[0]  # Pegar o primeiro (deve ser único)
+
+                    # Extrair informações do formulário
+                    for secao in formulario.get('sections', []):
+                        if secao.get('title') == 'Identificação':
+                            info_item = {}
+
+                            # Mapear os campos
+                            for questao in secao.get('questions', []):
+                                titulo = questao.get('title', '').lower()
+                                valor = None
+
+                                if questao.get('sub_questions'):
+                                    valor = questao['sub_questions'][0].get('value')
+
+                                # Mapear campos conhecidos
+                                if 'item' in titulo and 'cláusula' in titulo:
+                                    info_item['item'] = valor
+                                elif 'código' in titulo:
+                                    info_item['codigo'] = valor
+                                elif 'instrumento' in titulo:
+                                    info_item['instrumento'] = valor or 'Contrato'
+                                elif 'dimensão' in titulo:
+                                    info_item['dimensao'] = valor
+                                elif 'verificação' in titulo:
+                                    info_item['verificacao'] = valor
+                                elif 'indicador' in titulo:
+                                    info_item['indicador'] = valor
+
+                            # Adicionar valores padrão para AV e peso (serão preenchidos na execução)
+                            info_item['resposta'] = 'Não avaliado'
+                            info_item['av'] = 1
+                            info_item['peso'] = 1
+
+                            if 'item' in info_item:
+                                itens.append(info_item)
+                                print(f"   ✅ Item {info_item['item']} processado")
+                            break
+
+        if itens:
+            itens_por_tipo[tipo] = itens
+
+    return itens_por_tipo
 
 
 def main():
@@ -172,9 +312,20 @@ def main():
             print("❌ Falha nos testes dos módulos.")
             sys.exit(1)
 
+        # Modificar webhook para incluir POST
+        print("\n🔧 Configurando POST automático...")
+        obter_ultimo_checklist = modificar_webhook_com_post()
+        print("✅ POST automático configurado!")
+
         # Criar aplicação FastAPI usando as funções do webhook
         print("\n🏗️  Criando aplicação FastAPI...")
         app = webhook.criar_app_fastapi()
+
+        # Adicionar endpoint para ver último checklist
+        @app.get("/ultimo-checklist")
+        async def ultimo_checklist():
+            """Retorna o ID do último checklist criado"""
+            return obter_ultimo_checklist()
 
         # Criar túnel ngrok
         print("🌐 Criando túnel ngrok...")
@@ -234,6 +385,26 @@ def executar_teste_rapido():
 
     except Exception as e:
         print(f"❌ Erro no teste de cache: {e}")
+        return False
+
+    # Testar criação de checklist
+    print("\n📝 Testando sistema de POST...")
+    try:
+        creator = ChecklistCreator()
+        print("✅ Sistema de POST carregado!")
+
+        # Teste simples de estrutura
+        test_data = {
+            'data_prevista': '2025-06-23',
+            'contrato': 'TEST-001',
+            'identificador': 'TEST-2025',
+            'concessionaria': 'Empresa Teste'
+        }
+
+        print(f"✅ Estrutura de dados validada!")
+
+    except Exception as e:
+        print(f"❌ Erro no teste de POST: {e}")
         return False
 
     print("\n✅ TESTE RÁPIDO CONCLUÍDO COM SUCESSO!")
