@@ -1,8 +1,11 @@
+import time
+
 import requests
 import json
 from datetime import datetime
 from typing import Dict, List, Optional, Any
 import uuid
+
 
 class ChecklistCreator:
     def __init__(self):
@@ -94,7 +97,7 @@ class ChecklistCreator:
         self.identification_questions = {
             'data_prevista': '8113d0edd61c4cf6bf65ec10bdf68cda',
             'contrato': '11caa9daefcd41bcade0fb221886758b',
-            'identificador': 'ed1c45973cfd47cbbd13fb26ff448e16',
+            'identificador': 'ed1c45973cfd47cbbd13fb26ff448e16|1',
             'concessionaria': '8838d1ca06bb4e0ba842b0e1adc5d949'
         }
 
@@ -142,11 +145,11 @@ class ChecklistCreator:
         if response.status_code not in [200, 201]:
             print(f"❌ Erro ao criar checklist: {response.status_code}")
             print(response.text)
+            return None
         else:
             checklist_id = response.json()["_id"]["$oid"]
             print(f"✅ Checklist criado com id: {checklist_id}")
             return checklist_id
-
 
     def adicionar_subchecklists(self, checklist_id: str, tipo: str, itens: List[Dict[str, Any]]):
         if not itens:
@@ -160,15 +163,21 @@ class ChecklistCreator:
 
         for item_data in itens:
             sub_checklist_questions = []
-            for campo, self.question_template_id in self.sub_question_mapping.items():
-                # Only send valid values to questions that are not lookups
-                valor = str(item_data.get(campo, ""))
-                sub_checklist_questions.append({
-                    "id": self.question_template_id,
-                    "value": valor
-                })
 
-            print(f"Debug: using subchecklist ID '{self.question_ids[tipo]}' with {len(sub_checklist_questions)} questions")
+            # CORREÇÃO: Usar question_mapping[campo] em vez de self.question_template_id
+            for campo, question_id in question_mapping.items():
+                if campo in item_data:
+                    valor = str(item_data[campo])
+
+                    # Calcular AV*P se for o campo avp
+                    if campo == 'avp' and 'av' in item_data and 'peso' in item_data:
+                        valor = str(item_data['av'] * item_data['peso'])
+
+                    sub_checklist_questions.append({
+                        "question_id": question_id,  # Usar question_id corretamente
+                        "value": valor
+                    })
+
             sub_checklists.append({
                 "id": self.question_ids[tipo],
                 "sub_checklist_questions": sub_checklist_questions
@@ -178,13 +187,19 @@ class ChecklistCreator:
             "checklist_id": checklist_id,
             "sub_checklists": sub_checklists
         }
-        response = requests.post(f"{self.base_url}/subchecklists", headers=self.headers, json=payload)
+
+        print(f"📤 Enviando payload com {len(sub_checklists)} subchecklists...")
+        response = requests.post(
+            f"{self.base_url}/subchecklists",
+            headers=self.headers,
+            json=payload
+        )
+
         if response.status_code in [200, 201]:
             print(f"✅ {len(itens)} subchecklists adicionados para {tipo}")
         else:
             print(f"❌ Erro ao adicionar subchecklists para {tipo}: {response.status_code}")
             print(response.text)
-
 
     def criar_checklist_completo(self, identificacao: Dict[str, str],
                                  itens_por_tipo: Dict[str, List[Dict]] = None,
@@ -196,17 +211,26 @@ class ChecklistCreator:
             creator_id=creator_id
         )
 
+        if not checklist_id:
+            print("❌ Falha ao criar checklist principal")
+            return None
+
         if not itens_por_tipo:
-            return
+            print("ℹ️ Nenhum item para adicionar")
+            return checklist_id
+
+        print("⏳ Aguardando 10 segundos antes de adicionar subchecklists...")
+        time.sleep(10)
 
         for tipo, itens in itens_por_tipo.items():
             if tipo in self.question_ids and itens:
                 self.adicionar_subchecklists(checklist_id, tipo, itens)
 
+        return checklist_id
 
     def _gerar_subchecklist_id(self):
         """Gera um ID único para subchecklist"""
-        return str(uuid.uuid4()).replace('-', '')
+        return str(uuid.uuid4()).replace('-', '')[:32]  # Limitar a 32 caracteres
 
 
 # Exemplo de uso
@@ -215,20 +239,20 @@ if __name__ == "__main__":
 
     # Dados de identificação
     identificacao = {
-        "data_prevista": None,
-        "contrato": None,
+        "data_prevista": "26/06/2025",
+        "contrato": "01/2021",
+        "identificador": "TESTE-2025",
         "concessionaria": "Empresa XYZ"
     }
 
     todos_itens = {
         'FA': [
             {
-                'item': '12.1.1.3',
+                #'item': '12.1',
                 'codigo': '03.04.01.03',
                 'instrumento': 'Contrato',
                 'dimensao': 'SÓCIO-AMBIENTAL',
                 'verificacao': 'O Concessionário implantou Programa Interpretativo?',
-                'resposta': 'Houve um registro',
                 'av': 4,
                 'peso': 3,
                 'indicador': 'IERI'
@@ -236,40 +260,38 @@ if __name__ == "__main__":
         ],
         'FT': [
             {
-                'item': '10.2',
+                #'item': '12.1',
                 'codigo': '03.04.05.03',
                 'instrumento': 'Contrato',
                 'dimensao': 'FINANCEIRA',
                 'verificacao': 'O Concessionário vem aplicando os descontos?',
                 'indicador': 'IECOMPR',
-                'resposta': 'Houve poucos registros',
                 'av': 3,
                 'peso': 2
             }
         ],
         'FO': [
             {
-                'item': '12.1',
+                #'item': '12.1',
                 'codigo': '03.04.01.01',
                 'instrumento': 'Contrato',
                 'dimensao': 'SÓCIO-AMBIENTAL',
                 'verificacao': 'A Concessionário vem aplicando recursos nos Macrotemas?',
                 'indicador': 'IECA',
-                'resposta': 'Não aplicável no momento',
                 'av': 1,
                 'peso': 3
             }
         ]
     }
 
-    print("\n\n=== EXEMPLO 1: Usando fluxo completo ===")
-
-
-    creator.criar_checklist_completo(
+    resultado = creator.criar_checklist_completo(
         identificacao=identificacao,
         itens_por_tipo=todos_itens,
         assignee_id="6478f2c883e4a9312d68da0b",
         creator_id="6478f2c883e4a9312d68da0b"
     )
 
-
+    if resultado:
+        print(f"\n🎉 Processo concluído! Checklist ID: {resultado}")
+    else:
+        print("\n❌ Falha no processo de criação")

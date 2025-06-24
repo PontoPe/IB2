@@ -8,6 +8,7 @@ import GET
 
 # Lista para armazenar apenas os itens habilitados do último webhook
 itens_habilitados_ultimo = []
+last_webhook_id = None  # Variável global para armazenar o ID do último webhook processado
 
 
 def extrair_informacoes_planejamento(data):
@@ -251,6 +252,20 @@ def processar_webhook_completo(body):
     Returns:
         dict: Resposta formatada do processamento
     """
+    global last_webhook_id
+
+    # Generate a unique ID from the webhook content
+    import hashlib
+    webhook_content = json.dumps(body, sort_keys=True)
+    current_id = hashlib.md5(webhook_content.encode()).hexdigest()
+
+    # Check if this is a duplicate
+    if current_id == last_webhook_id:
+        print("🔄 Duplicate webhook detected - ignoring")
+        return {"status": "ignored", "reason": "duplicate_request"}
+
+    # Save this ID
+    last_webhook_id = current_id
     print("🚀 Webhook recebido!")
 
     # SEMPRE ATUALIZA O CACHE A CADA ATIVAÇÃO

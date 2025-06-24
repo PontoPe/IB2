@@ -81,19 +81,18 @@ def inicializar_sistema():
     print("✅ Sistema inicializado com sucesso!")
     return True
 
-
-def criar_tunel_ngrok(porta=8000):
+def criar_tunel_ngrok(porta=8000, dominio="quietly-meet-robin.ngrok-free.app"):
     """
-    Cria o túnel ngrok
+    Cria o túnel ngrok com um domínio estático
     """
     try:
-        public_url = ngrok.connect(porta)
-        print(f"🔗 Túnel ngrok criado: {public_url}")
+        # Especificar o domínio reservado ao criar o túnel
+        public_url = ngrok.connect(porta, domain=dominio)
+        print(f"🔗 Túnel ngrok criado com domínio fixo: {public_url}")
         return public_url
     except Exception as e:
         print(f"❌ Erro ao criar túnel ngrok: {e}")
         return None
-
 
 def exibir_informacoes_sistema(public_url):
     """
@@ -267,10 +266,9 @@ def processar_itens_para_post(dados_webhook, formularios_por_tipo=None):
                                 if questao.get('sub_questions'):
                                     valor = questao['sub_questions'][0].get('value')
 
-                                # Mapear campos conhecidos
-                                if 'item' in titulo and 'cláusula' in titulo:
-                                    info_item['item'] = valor
-                                elif 'código' in titulo:
+                                # REMOVER mapeamento de 'item' e 'resposta'
+                                # Mapear apenas campos necessários
+                                if 'código' in titulo:
                                     info_item['codigo'] = valor
                                 elif 'instrumento' in titulo:
                                     info_item['instrumento'] = valor or 'Contrato'
@@ -281,21 +279,21 @@ def processar_itens_para_post(dados_webhook, formularios_por_tipo=None):
                                 elif 'indicador' in titulo:
                                     info_item['indicador'] = valor
 
-                            # Adicionar valores padrão para AV e peso (serão preenchidos na execução)
-                            info_item['resposta'] = 'Não avaliado'
+                            # REMOVER linha de 'resposta'
+                            # Adicionar valores padrão para AV e peso
                             info_item['av'] = 1
                             info_item['peso'] = 1
 
-                            if 'item' in info_item:
+                            # MODIFICAR condição - não verificar mais se tem 'item'
+                            if info_item:  # Se tem algum campo preenchido
                                 itens.append(info_item)
-                                print(f"   ✅ Item {info_item['item']} processado")
+                                print(f"   ✅ Item processado")
                             break
 
         if itens:
             itens_por_tipo[tipo] = itens
 
     return itens_por_tipo
-
 
 def main():
     """
@@ -327,9 +325,9 @@ def main():
             """Retorna o ID do último checklist criado"""
             return obter_ultimo_checklist()
 
-        # Criar túnel ngrok
-        print("🌐 Criando túnel ngrok...")
-        public_url = criar_tunel_ngrok(8000)
+        # Criar túnel ngrok com domínio estático
+        print("🌐 Criando túnel ngrok com domínio estático...")
+        public_url = criar_tunel_ngrok(8000, "quietly-meet-robin.ngrok-free.app")
 
         if not public_url:
             print("❌ Falha ao criar túnel ngrok.")
