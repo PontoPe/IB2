@@ -4,7 +4,6 @@
 
 This project provides a webhook-based automation system that processes planning checklists from Way-V and automatically creates execution checklists. The system acts as a bridge between planning and execution phases by automating the workflow.
 
-![Project Workflow](https://via.placeholder.com/800x400?text=Webhook+Processing+Flow)
 
 ## Features
 
