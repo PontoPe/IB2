@@ -32,7 +32,7 @@ class ChecklistCreator:
         # Mapeamento dos IDs das sub-perguntas para cada tipo
         self.sub_question_mapping = {
             'FA': {
-                'item': '1698387cdcd94042b978a272d7248fb8',
+                'item': '3396430e77c74faebb2ebbfefac98b37',
                 'codigo': '5a507221009d479a87fe3ac2de9b1919',
                 'instrumento': 'b97d97f46fc04c15a2c301949d1b8861',
                 'dimensao': '3c12a83a05b7482193cbf32d511c864e',
@@ -44,7 +44,7 @@ class ChecklistCreator:
                 'indicador': '68015fa3daf29bba925f3db7'
             },
             'FT': {
-                'item': 'd762bd3540d14de799e31645a451d37b',
+                'item': 'b3f6d94b422a426a90f38ce833f1d8e5',
                 'codigo': '61a996bc1fc34a79a057337493e40b82',
                 'instrumento': 'b2a7a4c6f8e147f4a05ec7078f8fa701',
                 'dimensao': '340e1d43c30f44c688feb46a2a67804e',
@@ -56,7 +56,7 @@ class ChecklistCreator:
                 'avp': '755a8a013f834a47b1e38616ca4cb940'
             },
             'FO': {
-                'item': 'f2430b29128a4c34ad5e01b7b6b05590',
+                'item': '24039db27aa8414cb886c60f379c311e',
                 'codigo': '683f4b1dc4a5538b711b0f01',
                 'instrumento': '18d14859aacf40f8a1ef25e42444c969',
                 'dimensao': '83a2870b2f7845aaab120084d5337ac7',
@@ -68,7 +68,7 @@ class ChecklistCreator:
                 'avp': '8dad2e71fbf94e1ab1249756a8ff96eb'
             },
             'GC': {
-                'item': '835fef882525445fbf2559bf9c00083b',
+                'item': 'a55b817719214888a93b2f388d372263',
                 'instrumento': '1a40fe0f826841da8b43ffeba3c1eeae',
                 'codigo': '683f4f9f6019b1f3b94bbeff',
                 'dimensao': '597dcedfa3a9431d997dfca22f19dd1d',
@@ -80,7 +80,7 @@ class ChecklistCreator:
                 'avp': '1d9c6ac747de4b6d96c9e7ed02b3a350'
             },
             'VC': {
-                'item': 'fa60b9d2d76e4c4aaac5e9abc4fe0fcc',
+                'item': 'bdb01f91a9774e51ac61cc3cb1d73920',
                 'instrumento': '5a1e10805d00494eaa8b8f84b321e4d0',
                 'codigo': '683f51034c5aa9678b216f1e',
                 'dimensao': '954901ca7d034cb7ae6695ba36497cdc',

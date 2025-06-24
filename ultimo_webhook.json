@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-06-24T13:37:10.067055",
+  "timestamp": "2025-06-24T15:48:25.913719",
   "original": {
     "_id": {
       "$oid": "6859e203f7bc85eba7ab7f49"
@@ -4157,7 +4157,7 @@
                 "question": "Enviar para execução (FA)",
                 "_id": "5d8796cd727649c98214014079a42c75",
                 "section": "",
-                "value": "false",
+                "value": "true",
                 "type": "boolean"
               }
             ]
@@ -4168,19 +4168,94 @@
         "order": 1,
         "question": "Adicionar itens - Fiscalização de Obras (COPEA)",
         "_id": "f301ff05ca8a4bfdbbb72e132159cf68",
-        "section": "680150df12e98a390ac85b2d"
+        "section": "680150df12e98a390ac85b2d",
+        "sub_checklists": [
+          {
+            "_id": {
+              "$oid": "685af168433740d4447e2e22"
+            },
+            "sub_checklist_questions": [
+              {
+                "order": 2,
+                "question": "Item (FO)",
+                "_id": "ac7d76d57a234fa49cdf6de8f3229012",
+                "section": "",
+                "value": "1.5 ",
+                "type": "string"
+              },
+              {
+                "order": 3,
+                "question": "Enviar para execução (FO)",
+                "_id": "424743c565014a238053429a52a454c8",
+                "section": "",
+                "value": "true",
+                "type": "boolean"
+              }
+            ]
+          }
+        ]
       },
       {
         "order": 1,
         "question": "Adicionar itens - Gestão do Contrato",
         "_id": "2e82b67427f14ffa926eeec2e0c4f851",
-        "section": "680150ef0e3c46b599287973"
+        "section": "680150ef0e3c46b599287973",
+        "sub_checklists": [
+          {
+            "_id": {
+              "$oid": "685af168433740d4447e2e24"
+            },
+            "sub_checklist_questions": [
+              {
+                "order": 2,
+                "question": "Item (GC)",
+                "_id": "2394be8f20af4640a062271441b568f5",
+                "section": "",
+                "value": "12.1",
+                "type": "string"
+              },
+              {
+                "order": 3,
+                "question": "Enviar para execução (GC)",
+                "_id": "4ae03226c7be4a7e94a6be51f7eaadab",
+                "section": "",
+                "value": "true",
+                "type": "boolean"
+              }
+            ]
+          }
+        ]
       },
       {
         "order": 1,
         "question": "Adicionar itens - Verificador de Conformidade",
         "_id": "20bf85a6c74e4751a4179c38dc4601fc",
-        "section": "680150f8a1d4e7bd42bda004"
+        "section": "680150f8a1d4e7bd42bda004",
+        "sub_checklists": [
+          {
+            "_id": {
+              "$oid": "685af168433740d4447e2e26"
+            },
+            "sub_checklist_questions": [
+              {
+                "order": 2,
+                "question": "Item (VC)",
+                "_id": "96cab33d12ff4b60839f8bb7a4412917",
+                "section": "",
+                "value": "15.2",
+                "type": "string"
+              },
+              {
+                "order": 3,
+                "question": "Enviar para execução (VC)",
+                "_id": "29608110b7424cf48538d42e6f59e868",
+                "section": "",
+                "value": "true",
+                "type": "boolean"
+              }
+            ]
+          }
+        ]
       },
       {
         "order": 5,
@@ -4208,18 +4283,52 @@
     "itens_fa": [
       {
         "item": "11",
-        "habilitado": false,
+        "habilitado": true,
         "tipo": "FA"
       }
     ],
-    "itens_fo": [],
-    "itens_gc": [],
-    "itens_vc": []
+    "itens_fo": [
+      {
+        "item": "1.5 ",
+        "habilitado": true,
+        "tipo": "FO"
+      }
+    ],
+    "itens_gc": [
+      {
+        "item": "12.1",
+        "habilitado": true,
+        "tipo": "GC"
+      }
+    ],
+    "itens_vc": [
+      {
+        "item": "15.2",
+        "habilitado": true,
+        "tipo": "VC"
+      }
+    ]
   },
   "itens_habilitados": [
     {
       "item": "10.2",
       "tipo": "FT"
+    },
+    {
+      "item": "11",
+      "tipo": "FA"
+    },
+    {
+      "item": "1.5 ",
+      "tipo": "FO"
+    },
+    {
+      "item": "12.1",
+      "tipo": "GC"
+    },
+    {
+      "item": "15.2",
+      "tipo": "VC"
     }
   ]
 }

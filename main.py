@@ -212,7 +212,6 @@ def modificar_webhook_com_post():
 
     return obter_ultimo_checklist
 
-
 def processar_itens_para_post(dados_webhook, formularios_por_tipo=None):
     """
     Processa os itens habilitados e busca informações no cache para criar o formato do POST
@@ -258,6 +257,9 @@ def processar_itens_para_post(dados_webhook, formularios_por_tipo=None):
                         if secao.get('title') == 'Identificação':
                             info_item = {}
 
+                            # Adicionar o campo 'item' do webhook
+                            info_item['item'] = item_clausula
+
                             # Mapear os campos
                             for questao in secao.get('questions', []):
                                 titulo = questao.get('title', '').lower()
@@ -266,8 +268,7 @@ def processar_itens_para_post(dados_webhook, formularios_por_tipo=None):
                                 if questao.get('sub_questions'):
                                     valor = questao['sub_questions'][0].get('value')
 
-                                # REMOVER mapeamento de 'item' e 'resposta'
-                                # Mapear apenas campos necessários
+                                # Incluir mapeamento de 'item'
                                 if 'código' in titulo:
                                     info_item['codigo'] = valor
                                 elif 'instrumento' in titulo:
@@ -284,10 +285,10 @@ def processar_itens_para_post(dados_webhook, formularios_por_tipo=None):
                             info_item['av'] = 1
                             info_item['peso'] = 1
 
-                            # MODIFICAR condição - não verificar mais se tem 'item'
-                            if info_item:  # Se tem algum campo preenchido
+                            # Item será incluído se tiver qualquer campo preenchido
+                            if info_item:
                                 itens.append(info_item)
-                                print(f"   ✅ Item processado")
+                                print(f"   ✅ Item processado: {item_clausula}")
                             break
 
         if itens:
