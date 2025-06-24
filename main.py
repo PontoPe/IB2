@@ -46,7 +46,7 @@ def configurar_ngrok():
     """
     try:
         # Configurar authtoken (substitua pelo seu real)
-        auth_token = "2xx8LQUnhKIsNUxERL0JGniq3xg_3ahxzWJjMc7K1kduj1xnm"
+        auth_token = "2yy04GbRMzDFhGgaRo3PGRqV5tC_4gkaL24YZ3yhDkNq9wDuh"
         conf.get_default().auth_token = auth_token
 
         print("✅ ngrok configurado com sucesso!")
@@ -81,7 +81,7 @@ def inicializar_sistema():
     print("✅ Sistema inicializado com sucesso!")
     return True
 
-def criar_tunel_ngrok(porta=8000, dominio="quietly-meet-robin.ngrok-free.app"):
+def criar_tunel_ngrok(porta=8000, dominio="enormous-infinite-tahr.ngrok-free.app"):
     """
     Cria o túnel ngrok com um domínio estático
     """
@@ -328,7 +328,7 @@ def main():
 
         # Criar túnel ngrok com domínio estático
         print("🌐 Criando túnel ngrok com domínio estático...")
-        public_url = criar_tunel_ngrok(8000, "quietly-meet-robin.ngrok-free.app")
+        public_url = criar_tunel_ngrok(8000, "enormous-infinite-tahr.ngrok-free.app")
 
         if not public_url:
             print("❌ Falha ao criar túnel ngrok.")
