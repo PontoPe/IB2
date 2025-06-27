@@ -13,7 +13,7 @@ import json
 # Importar módulos do projeto
 import webhook
 import GET
-from POST import ChecklistCreator# Importar o criador de checklists
+from POST import ChecklistCreator  # Importar o criador de checklists
 import POSTtest
 
 
@@ -296,53 +296,84 @@ def processar_itens_para_post(dados_webhook, formularios_por_tipo=None):
 
     return itens_por_tipo
 
+
+def ChecklistLigado():
+    """Modo completo com criação automática de checklists"""
+    # Modificar webhook para incluir POST
+    print("\n🔧 Configurando POST automático...")
+    obter_ultimo_checklist = modificar_webhook_com_post()
+    print("✅ POST automático configurado!")
+
+    # Criar aplicação FastAPI usando as funções do webhook
+    print("\n🏗️  Criando aplicação FastAPI...")
+    app = webhook.criar_app_fastapi()
+
+    @app.get("/ultimo-checklist")
+    async def ultimo_checklist():
+        """Retorna o ID do último checklist criado"""
+        return obter_ultimo_checklist()
+
+    # Criar túnel ngrok com domínio estático
+    print("🌐 Criando túnel ngrok com domínio estático...")
+    public_url = criar_tunel_ngrok(8000, "enormous-infinite-tahr.ngrok-free.app")
+
+    if not public_url:
+        print("❌ Falha ao criar túnel ngrok.")
+        sys.exit(1)
+
+    # Exibir informações do sistema
+    exibir_informacoes_sistema(public_url)
+
+    # Iniciar servidor
+    print("\n🚀 INICIANDO SERVIDOR...")
+    print("   (Pressione Ctrl+C para parar)")
+    print("-" * 60)
+
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+
+
+def ItensLigado():
+    """Template de exemplo sem criação automática"""
+    print("\n🔧 Modo ItensLigado ativado - apenas recebendo webhooks")
+
+    app = webhook.criar_app_fastapi()
+
+    print("🌐 Criando túnel ngrok com domínio estático...")
+    public_url = criar_tunel_ngrok(8000, "enormous-infinite-tahr.ngrok-free.app")
+
+    if not public_url:
+        print("❌ Falha ao criar túnel ngrok.")
+        sys.exit(1)
+
+    exibir_informacoes_sistema(public_url)
+
+    print("\n🚀 INICIANDO SERVIDOR...")
+    print("   (Pressione Ctrl+C para parar)")
+    print("-" * 60)
+
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+
 def main():
-    """
-    Função principal do sistema
-    """
+    """Função principal do sistema"""
     try:
-        # Inicializar sistema
         if not inicializar_sistema():
             print("❌ Falha na inicialização do sistema.")
             sys.exit(1)
 
-        # Testar módulos
         if not testar_modulos():
             print("❌ Falha nos testes dos módulos.")
             sys.exit(1)
 
-        # Modificar webhook para incluir POST
-        print("\n🔧 Configurando POST automático...")
-        obter_ultimo_checklist = modificar_webhook_com_post()
-        print("✅ POST automático configurado!")
+        modo = "checklist"
+        if "--itens" in sys.argv:
+            modo = "itens"
+        elif "--checklist" in sys.argv:
+            modo = "checklist"
 
-        # Criar aplicação FastAPI usando as funções do webhook
-        print("\n🏗️  Criando aplicação FastAPI...")
-        app = webhook.criar_app_fastapi()
-
-        # Adicionar endpoint para ver último checklist
-        @app.get("/ultimo-checklist")
-        async def ultimo_checklist():
-            """Retorna o ID do último checklist criado"""
-            return obter_ultimo_checklist()
-
-        # Criar túnel ngrok com domínio estático
-        print("🌐 Criando túnel ngrok com domínio estático...")
-        public_url = criar_tunel_ngrok(8000, "enormous-infinite-tahr.ngrok-free.app")
-
-        if not public_url:
-            print("❌ Falha ao criar túnel ngrok.")
-            sys.exit(1)
-
-        # Exibir informações do sistema
-        exibir_informacoes_sistema(public_url)
-
-        # Iniciar servidor
-        print("\n🚀 INICIANDO SERVIDOR...")
-        print("   (Pressione Ctrl+C para parar)")
-        print("-" * 60)
-
-        uvicorn.run(app, host="0.0.0.0", port=8000)
+        if modo == "itens":
+            ItensLigado()
+        else:
+            ChecklistLigado()
 
     except KeyboardInterrupt:
         print("\n\n⏹️  Sistema interrompido pelo usuário.")
@@ -353,7 +384,6 @@ def main():
         sys.exit(1)
 
     finally:
-        # Cleanup se necessário
         print("🧹 Limpeza finalizada.")
 
 
