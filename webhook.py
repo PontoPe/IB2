@@ -335,6 +335,11 @@ def criar_app_fastapi():
     """
     app = FastAPI()
 
+    @app.post("/webhook_itens")
+    async def webhook_itens_endpoint(request: Request):
+        body = await request.json()
+        return processar_webhook_completo(body)
+
     @app.post("/webhook")
     async def webhook_endpoint(request: Request):
         body = await request.json()
